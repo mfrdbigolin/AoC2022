@@ -10,10 +10,12 @@
 // TODO: find an alternative to referencing every day file here.
 
 void day01(std::string);
+void day02(std::string);
 
-typedef void (*day_solve)(std::string);
-std::map<std::string, day_solve> DAYS{
-  {"01", day01}
+typedef void (*Day)(std::string);
+std::map<std::string, Day> DAYS{
+  {"01", day01},
+  {"02", day02}
 };
 
 #endif /* !DAYS_HH  */
