@@ -5,7 +5,7 @@
 MAKENAME = "Advent"
 
 MAIN = advent
-MODULES = day01 day02 utils
+MODULES = day01 day02 day03 utils
 
 SRC_DIR = src
 INCL_DIR = include
