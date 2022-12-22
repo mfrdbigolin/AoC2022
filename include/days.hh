@@ -16,6 +16,7 @@ void day04(std::string);
 void day05(std::string);
 void day06(std::string);
 void day08(std::string);
+void day09(std::string);
 
 typedef void (*Day)(std::string);
 std::map<std::string, Day> DAYS{
@@ -25,7 +26,8 @@ std::map<std::string, Day> DAYS{
   {"04", day04},
   {"05", day05},
   {"06", day06},
-  {"08", day08}
+  {"08", day08},
+  {"09", day09}
 };
 
 #endif /* !DAYS_HH  */

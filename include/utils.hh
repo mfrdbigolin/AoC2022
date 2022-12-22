@@ -7,5 +7,8 @@
 # include <string>
 
 std::string read_file(std::string filename);
+int pairing(int x, int y);
+
+# include "utils.tcc"
 
 #endif /* !UTILS_HH  */

@@ -24,3 +24,13 @@ std::string read_file(std::string filename) {
   file.close();
   return content;
 }
+
+// Szudzik’s pairing function: this function assigns to each coordinate in the
+// cartesian plane an unique natural number. 
+int pairing(int x, int y) {
+  // Map each integer to an unique natural number.
+  int nx = x >= 0 ? 2 * x : (-2 * x - 1);
+  int ny = y >= 0 ? 2 * y : (-2 * y - 1);
+
+  return nx < ny ? ny * ny + nx : nx * (nx + 1) + ny;
+}
