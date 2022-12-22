@@ -19,7 +19,7 @@ void day08(std::string);
 void day09(std::string);
 
 typedef void (*Day)(std::string);
-std::map<std::string, Day> DAYS{
+const std::map<std::string, Day> DAYS{
   {"01", day01},
   {"02", day02},
   {"03", day03},

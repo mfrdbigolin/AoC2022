@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
 
   auto input_data = read_file(input_filename);
 
-  DAYS[day](input_data);
+  DAYS.at(day)(input_data);
 
   return EXIT_SUCCESS;
 }
