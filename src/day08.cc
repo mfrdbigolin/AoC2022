@@ -35,8 +35,7 @@ size_t solve1(std::vector<std::vector<int>> tree_map) {
           std::make_pair(i, size - j - 1), std::make_pair(size - j - 1, i)};
 
       for (auto k = 0; k < 4; ++k) {
-        auto row = moves[k].first;
-        auto column = moves[k].second;
+        auto [row, column] = moves[k];
 
         if (!visible[size * row + column] &&
             tree_map[row][column] > maxima[k]) {
@@ -59,8 +58,7 @@ size_t get_row(std::vector<std::vector<int>> map,
 
   size_t scenic_score = 0;
 
-  auto i = start_point.first;
-  auto j = start_point.second;
+  auto [i, j] = start_point;
   auto initial_tree = map[i][j];
   while ((0 < i && i < size - 1) && (0 < j && j < size - 1)) {
     i += direction.first;

@@ -24,8 +24,7 @@ int solve(std::vector<std::pair<int, int>> motions, int knots = 2) {
   int visited_count = 1;
 
   for (auto motion : motions) {
-    auto motion_x = motion.first;
-    auto motion_y = motion.second;
+    auto [motion_x, motion_y] = motion;
 
     while (motion_x != 0 || motion_y != 0) {
       rope[0][0] += signal(motion_x);

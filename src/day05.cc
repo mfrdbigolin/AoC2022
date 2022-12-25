@@ -31,9 +31,7 @@ std::string solve(std::vector<CratePile> crate_piles,
   auto rearranged_piles = crate_piles;
 
   for (auto step : procedure) {
-    auto quantity = std::get<0>(step);
-    auto src = std::get<1>(step);
-    auto dest = std::get<2>(step);
+    auto [quantity, src, dest] = step;
 
     auto &src_pile = rearranged_piles[src - 1];
     auto &dest_pile = rearranged_piles[dest - 1];

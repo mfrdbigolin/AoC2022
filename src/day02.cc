@@ -41,8 +41,7 @@ static int solve(std::vector<Round> rounds, bool is_missing_move = false) {
   auto your_score = 0;
 
   for (auto round : rounds) {
-    auto opponent_move = round.first;
-    auto your_move = round.second;
+    auto [opponent_move, your_move] = round;
     Outcome round_outcome = Outcome(round.second);
 
     if (!is_missing_move) {

@@ -18,10 +18,12 @@ static int solve1(std::vector<AssignmentPair> assignments) {
   auto number_containments = 0;
 
   for (AssignmentPair elf_pair : assignments) {
-    bool is_first_contained = elf_pair.first.first >= elf_pair.second.first &&
-                              elf_pair.first.second <= elf_pair.second.second;
-    bool is_second_contained = elf_pair.second.first >= elf_pair.first.first &&
-                               elf_pair.second.second <= elf_pair.first.second;
+    auto [first_elf, second_elf] = elf_pair;
+
+    bool is_first_contained = first_elf.first >= second_elf.first &&
+                              first_elf.second <= second_elf.second;
+    bool is_second_contained = second_elf.first >= first_elf.first &&
+                               second_elf.second <= first_elf.second;
 
     number_containments += is_first_contained || is_second_contained;
   }
@@ -33,8 +35,10 @@ static int solve2(std::vector<AssignmentPair> assignments) {
   auto number_overlaps = 0;
 
   for (AssignmentPair elf_pair : assignments) {
-    number_overlaps += elf_pair.first.second >= elf_pair.second.first &&
-                       elf_pair.first.first <= elf_pair.second.second;
+    auto [first_elf, second_elf] = elf_pair;
+
+    number_overlaps += first_elf.second >= second_elf.first &&
+                       first_elf.first <= second_elf.second;
   }
 
   return number_overlaps;

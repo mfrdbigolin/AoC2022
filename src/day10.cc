@@ -14,8 +14,7 @@ std::vector<int> execute_program(std::vector<std::pair<int, int>> program) {
   std::vector<int> program_state{1};
 
   for (auto instruction : program) {
-    auto op_cycles = instruction.first;
-    auto oper = instruction.second;
+    auto [op_cycles, oper] = instruction;
 
     auto register_x = program_state[program_state.size() - 1];
 

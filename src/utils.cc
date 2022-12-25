@@ -26,7 +26,7 @@ std::string read_file(std::string filename) {
 }
 
 // Szudzik’s pairing function: this function assigns to each coordinate in the
-// cartesian plane an unique natural number. 
+// cartesian plane a unique natural number.
 int pairing(int x, int y) {
   // Map each integer to an unique natural number.
   int nx = x >= 0 ? 2 * x : (-2 * x - 1);
