@@ -34,3 +34,8 @@ int pairing(int x, int y) {
 
   return nx < ny ? ny * ny + nx : nx * (nx + 1) + ny;
 }
+
+// Pairing function in which the number of columns is expected to be bounded.
+int bounded_pair(int x, int y, int num_cols) {
+  return num_cols*y + x;
+}
