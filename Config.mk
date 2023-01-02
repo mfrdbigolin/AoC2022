@@ -1,5 +1,5 @@
 # Configuration for the Makefile
-# Copyright (C) 2022 Matheus Fernandes Bigolin <mfrdrbigolin@disroot.org>
+# Copyright (C) 2022, 2023 Matheus Fernandes Bigolin <mfrdrbigolin@disroot.org>
 # SPDX-License-Identifier: MIT
 
 MAKENAME = "Advent"
