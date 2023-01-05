@@ -22,12 +22,13 @@ void day10(std::string);
 void day11(std::string);
 void day12(std::string);
 void day14(std::string);
+void day15(std::string);
 
 using Day = std::function<void(std::string)>;
 
 const std::map<std::string, Day> DAYS{
-    {"01", day01}, {"02", day02}, {"03", day03}, {"04", day04},
-    {"05", day05}, {"06", day06}, {"08", day08}, {"09", day09},
-    {"10", day10}, {"11", day11}, {"12", day12}, {"14", day14}};
+    {"01", day01}, {"02", day02}, {"03", day03}, {"04", day04}, {"05", day05},
+    {"06", day06}, {"08", day08}, {"09", day09}, {"10", day10}, {"11", day11},
+    {"12", day12}, {"14", day14}, {"15", day15}};
 
 #endif /* !DAYS_HH  */
