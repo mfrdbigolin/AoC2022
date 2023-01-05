@@ -1,4 +1,4 @@
-// Copyright (C) 2022 Matheus Fernandes Bigolin <mfrdrbigolin@disroot.org>
+// Copyright (C) 2022, 2023 Matheus Fernandes Bigolin <mfrdrbigolin@disroot.org>
 // SPDX-License-Identifier: MIT
 
 #include <fstream>
@@ -37,5 +37,9 @@ int pairing(int x, int y) {
 
 // Pairing function in which the number of columns is expected to be bounded.
 int bounded_pair(int x, int y, int num_cols) {
-  return num_cols*y + x;
+  return num_cols * y + x;
+}
+
+int bounded_triple(int x, int y, int z, int max_space) {
+  return z * max_space * max_space + y * max_space + x;
 }
